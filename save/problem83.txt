@@ -1,0 +1,64 @@
+问题编号:83
+
+
+问题标题:HDU3401 Trade
+
+
+问题描述:
+Recently, lxhgww is addicted to stock, he finds some regular patterns after a few days&#39; study.  
+He forecasts the next T days&#39; stock market. On the i&#39;th day, you can buy one stock with the price APi or sell one stock to get BPi.   
+There are some other limits, one can buy at most ASi stocks on the i&#39;th day and at most sell BSi stocks.  
+Two trading days should have a interval of more than W days. That is to say, suppose you traded (any buy or sell stocks is regarded as a trade)on the i&#39;th day, the next trading day must be on the (i+W+1)th day or later.  
+What&#39;s more, one can own no more than MaxP stocks at any time.  
+
+Before the first day, lxhgww already has infinitely money but no stocks, of course he wants to earn as much money as possible from the stock market. So the question comes, how much at most can he earn?  
+大概意思如下:
+你偶然发现你获得了预测股市的超能力(我觉得预测彩票的好用些)，于是你决定炒股赚钱  
+你可以预测T天内的的购入价格，出售价格，购入最大股数，出售最大股数  
+根据国家规定你的最大持有股数为maxp  
+股市规定每过w天才能进行一次交易(包括买和卖)  
+现在你想知道T天之后你的最大获利是多少
+
+
+输入格式:
+The first line is an integer t, the case number.  
+The first line of each case are three integers T , MaxP , W .  
+(0 &lt;= W &lt; T &lt;= 2000, 1 &lt;= MaxP &lt;= 2000) .  
+The next T lines each has four integers APi，BPi，ASi，BSi( 1&lt;=BPi&lt;=APi&lt;=1000,1&lt;=ASi,BSi&lt;=MaxP), which are mentioned above.  
+第一行一个整数T表示数据组数  
+接下来每一组数据:  
+第一行三个整数 T,MAXP,W 分别表示天数，嘴大吃有股数，要求交易间隔天数  
+接下来的T行每行四个数，依次是当天的购入价格，出售价格，购入最大股数，出售最大股数  
+
+
+输出格式:
+The most money lxhgww can earn.    
+你能挣得最大钱数  
+
+
+测试样例:
+####样例输入
+```
+1
+5 2 0
+2 1 1 1
+2 1 1 1
+3 2 1 1
+4 3 1 1
+5 4 1 1
+```
+####样例输出
+```
+3
+```
+
+
+数据范围与提示
+t∈[1,20]  
+W∈[0,100] (我忘了具体造的数据范围是什么..反正和原题不一样..)  
+T∈[0,2000] 
+Maxp∈[1,2000]  
+数据&amp;翻译BY Fmuckss，如果有错误请指出。
+由于最后一个点数据造大了..我把时限提高1.5s..(其实是我懒得压常数orz...)
+
+

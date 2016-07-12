@@ -1,0 +1,48 @@
+问题编号:183
+
+
+问题标题:[POJ 3241] 元素划分
+
+
+问题描述:
+We have N (N ≤ 10000) objects, and wish to classify them into several groups by judgement of their resemblance. To simply the model, each object has 2 indexes a and b (|a|, |b| ≤ 500). The resemblance of object i and object j is defined by dij = |ai - aj| + |bi - bj|, and then we say i is dij resemble to j. Now we want to find the minimum value of X, so that we can classify the N objects into K (K &lt; N) groups, and in each group, one object is at most X resemble to another object in the same group, i.e, for every object i, if i is not the only member of the group, then there exists one object j (i ≠ j) in the same group that satisfies dij ≤ X.  
+有一个包含了n(n &lt;= 10000)个元素的集合，现在我们需要将他们以相似度为评判标准分为若干个集合。简单来讲，每一个元素包含了两个特征值a和b(a, b &lt;= 500)，而元素i和元素j的相似度将由d(dij = |ai - aj| + |bi - bj|)来决定。现在，我们想要找到一个最小值x，使得将n个元素可以分为k(k &lt; n)组，并且满足在同一组内，至少存在一个元素和其他元素的相似度小于x，即对于元素i，假如i不是集合中的唯一元素，那么其所在集合中必须存在一个j(i != j)，使得他们的相似度小于等于x(dij &lt;= x)。现在将给你元素个数n和集合数k以及每个元素的特征值ai, bi，请求出x的最小值。  
+(翻译请讲究着看...我尽力复述原文了....)
+
+
+输入格式:
+The first line contains two integers N and K. The following N lines each contain two integers a and b, which describe a object.  
+输入包含多组测试，对于每一个测试点:  
+第一行包含两个整数n和k，接下来的n行，每行两个整数，第i行的数表示第i个元素的特征值a和b。
+
+
+输出格式:
+A single line contains the minimum X.  
+对于每一组测试，输出包含一行一个整数，为x的最小值。
+
+
+测试样例:
+####样例输入
+```
+6 2
+1 2
+2 3
+2 2
+3 4
+4 3
+3 1
+```
+####样例输出
+```
+2
+```
+
+
+数据范围与提示
+n &lt;= 10000;  
+k &lt; n;
+|a|, |b| &lt;= 500;
+
+对于样例，将前三个元素分为一组，后三个元素分为两组共两组满足k == 2，第一组中，第一个元素和第二个元素的d为2(|1 - 2| + |2 - 3| == 2)，第二组中，第三个元素和第四个元素的d为2(|3 - 4| + |4 - 3| == 2)
+
+
