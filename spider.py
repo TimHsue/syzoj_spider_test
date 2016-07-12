@@ -63,8 +63,8 @@ class Data(object):
 
 def download_pages(dl_url):
     opener = urllib2.build_opener()
-    opener.addheader = [('User_Agent', user_agent)]
-    opener.addheader = [('Cookie', 'session_id' + session_id)]
+    opener.addheaders = [('User_Agent', user_agent)]
+    opener.addheaders = [('Cookie', 'session_id=' + session_id)]
 
     try:
         response = opener.open(dl_url)
