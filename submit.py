@@ -51,7 +51,7 @@ def submit(local_add):
     opener = urllib2.build_opener()
     opener.addheaders = [('User_Agent', user_agent), ]
     opener.addheaders = [('Cookie', 'session_id=' + session_id)]
-
+    #这里需要用headers而不是header
     files = open(local_add, 'r')
     code = files.read()
     data = {"code": code}
